@@ -5,7 +5,7 @@ import {filter, map} from 'rxjs/operators';
 
 @Injectable()
 export class HttpCommunicationsService {
-  private host = 'http://localhost:8080/';
+  private host = 'http://localhost:3000/';
   constructor(private httpClient: HttpClient) {
   }
   retrievePostCall<T>(endpoint: string, body: any): Observable<T> {
