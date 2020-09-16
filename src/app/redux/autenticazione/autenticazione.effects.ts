@@ -5,7 +5,7 @@ import {Router} from '@angular/router';
 import {HttpCommunicationsService} from '../../core/http-communications/http-communications.service';
 import {map, switchMap, tap} from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
-import {loginUser, loginUserFailure, loginUserSuccess, initUser} from './autenticazione.actions';
+import {loginUser, loginUserFailure, loginUserSuccess, initUser, signUpUser, signUpUserSuccess} from './autenticazione.actions';
 import {User} from '../../core/models/user.interface';
 
 
@@ -43,7 +43,30 @@ export class autenticazioneEffects {
     map( (action) => initUser({ user: action.user })),
     tap(() => this.router.navigateByUrl('/home'))
   ));
-
+  signUpUser$ = createEffect(() => this.action$.pipe(
+    ofType(signUpUser),
+    switchMap(action => this.registerUser(action.email, action.password, action.nome, action.cognome).pipe(
+      switchMap(user => of(this.formatUser(user)).pipe(
+        map( (formattedUser) => signUpUserSuccess({ user: formattedUser }))
+      ))
+    ))
+  ));
+  signUpUserSuccess$ = createEffect(() => this.action$.pipe(
+    ofType(signUpUserSuccess),
+    tap((action) => console.log('utente registrato adesso devo registrarlo nella sessione e reindirizzarlo', action)),
+    map( (action) => initUser({ user: action.user })),
+    tap((action) => {
+      console.log('salvo in sessione l\'utente appena registrato');
+      sessionStorage.setItem('utente', JSON.stringify(action.user));
+      //this.router.navigateByUrl('/home');
+    })
+  ));
+  registerUser(email: string, password: string, nome: string, cognome: string): Observable<User> {
+    return this.http.retrievePostCall<User>('users', {email, password, nome, cognome});
+  }
+  formatUser(user: User): User {
+    return {email: user.email, nome: user.nome, id: user.id, cognome: user.cognome} as User;
+  }
   retreiveAllUsers(): Observable<User[]> {
     return this.http.retrieveGetCall<User[]>('users');
   }
