@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>SharedModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/shared/shared.module.ts</code>
         </p>
 
 
@@ -71,17 +71,27 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { CommonModule } from &#x27;@angular/common&#x27;;
+import {FormsModule, ReactiveFormsModule} from &#x27;@angular/forms&#x27;;
+import {RouterModule} from &#x27;@angular/router&#x27;;
 
 
-// tslint:disable-next-line:max-line-length
-const routes: Routes &#x3D; [{ path: &#x27;auth&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/autenticazione/autenticazione.module&#x27;).then(m &#x3D;&gt; m.AutenticazioneModule)&quot; }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  declarations: [],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule,
+  ],
+  exports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ]
 })
-export class AppRoutingModule { }
+export class SharedModule { }
 </code></pre>
     </div>
 </div>
@@ -117,7 +127,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'SharedModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
