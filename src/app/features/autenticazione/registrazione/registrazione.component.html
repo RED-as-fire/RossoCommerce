@@ -1,8 +1,55 @@
-<form [formGroup]="registerForm" (ngSubmit)="registrazioneUtente()">
-  <input type="text" placeholder="Nome" formControlName="nome">
-  <input type="text" placeholder="Cognome" formControlName="cognome">
-  <input type="email" placeholder="mail@mail.com" formControlName="email">
-  <input type="password" placeholder="inserisci password" formControlName="password">
-  <button type="submit">Registrati</button>
-  <a [routerLink]="'/auth/login'">Passa a Login</a>
-</form>
+<div class="right">
+  <div class="bg-contact2" >
+    <div class="container-contact2">
+      <div class="wrap-contact2">
+        <form class="contact2-form validate-form" [formGroup]="registerForm" (ngSubmit)="registrazioneUtente()">
+                    <span class="contact2-form-title">
+                        REGISTRAZIONE
+                    </span>
+
+          <div class="wrap-input2 validate-input" data-validate="Nome richiesto">
+            <input type="text" placeholder="Nome" formControlName="nome" class="input2" #username>
+          </div>
+
+          <div class="wrap-input2 validate-input" data-validate = "Cognome richiesto">
+            <input type="text" placeholder="Cognome" formControlName="cognome" class="input2" #name>
+          </div>
+
+          <div class="wrap-input2 validate-input" data-validate = "Email richiesta: es. ex@abc.xyz">
+            <input type="email" placeholder="mail@mail.com" formControlName="email" class="input2" #surname>
+          </div>
+
+          <div class="wrap-input2 validate-input" data-validate = "Password richiesta">
+            <input type="password" placeholder="inserisci password" formControlName="password" class="input2" #psw>
+          </div>
+
+          <table style="width: 100%;">
+            <tr>
+              <td>
+                <div class="container-contact2-form-btn">
+                  <div class="wrap-contact2-form-btn">
+                    <div class="contact2-form-bgbtn"></div>
+                    <button type="button" class="contact2-form-btn" [routerLink]="'/auth/login'">
+                      Passa a Login
+                    </button>
+                  </div>
+                </div>
+              </td>
+              <td>
+                <div class="container-contact2-form-btn">
+                  <div class="wrap-contact2-form-btn">
+                    <div class="contact2-form-bgbtn"></div>
+                    <button class="contact2-form-btn">
+                      Registrati
+                    </button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

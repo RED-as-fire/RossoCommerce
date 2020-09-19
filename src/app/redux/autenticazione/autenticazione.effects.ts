@@ -58,7 +58,7 @@ export class autenticazioneEffects {
     tap((action) => {
       console.log('salvo in sessione l\'utente appena registrato');
       sessionStorage.setItem('utente', JSON.stringify(action.user));
-      //this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('/home');
     })
   ));
   registerUser(email: string, password: string, nome: string, cognome: string): Observable<User> {

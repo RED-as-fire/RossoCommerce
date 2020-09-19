@@ -11,10 +11,12 @@ import {environment} from '../environments/environment';
 import {reducers} from './redux';
 import {autenticazioneEffects} from './redux/autenticazione/autenticazione.effects';
 import {CoreModule} from './core/core.module';
+import { HomeComponent } from './features/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import {CoreModule} from './core/core.module';
       logOnly: environment.production, // Restrict extension to log-only mode
     }),
     StoreRouterConnectingModule.forRoot(),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
