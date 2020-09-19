@@ -7,5 +7,37 @@
       "cognome": "baglio",
       "id": 0
     }
+  ],
+  "products": [
+    {
+      "id": 0,
+      "titolo": "Cyberpunk 2077",
+      "img": "assets/games/cyberpunk.jpg",
+      "piattaforma": [
+        PS4,
+        XBOX,
+        PC
+      ],
+      "prezzo": 59.99,
+      "formato": [
+        Fisico,
+        Digitale
+      ]
+    },
+    {
+      "id": 0,
+      "titolo": "Assassin's Creed Valhalla",
+      "img": "assets/games/assassin.jpg",
+      "piattaforma": [
+        PS4,
+        XBOX,
+        PC
+      ],
+      "prezzo": 59.99,
+      "formato": [
+        Fisico,
+        Digitale
+      ]
+    }
   ]
 }
