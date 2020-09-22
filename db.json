@@ -14,14 +14,14 @@
       "titolo": "Cyberpunk 2077",
       "img": "assets/games/cyberpunk.jpg",
       "piattaforma": [
-        PS4,
-        XBOX,
-        PC
+        "PS4",
+        "XBOX",
+        "PC"
       ],
       "prezzo": 59.99,
       "formato": [
-        Fisico,
-        Digitale
+        "Fisico",
+        "Digitale"
       ]
     },
     {
@@ -29,14 +29,14 @@
       "titolo": "Assassin's Creed Valhalla",
       "img": "assets/games/assassin.jpg",
       "piattaforma": [
-        PS4,
-        XBOX,
-        PC
+        "PS4",
+        "XBOX",
+        "PC"
       ],
       "prezzo": 59.99,
       "formato": [
-        Fisico,
-        Digitale
+        "Fisico",
+        "Digitale"
       ]
     }
   ]

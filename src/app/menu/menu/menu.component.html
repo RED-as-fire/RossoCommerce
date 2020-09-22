@@ -1,16 +1,16 @@
 <div *ngIf="currentRoute!='/login' && currentRoute!='/register'" class="wrapper menu">
 
   <ng-container>
-    <div [routerLink]="'/home'" class="one" *ngIf="currentRoute!='/home'">
+    <div [routerLink]="'/home'" class="one" >
       <span class="iconahome"></span>
       Home
     </div>
-    <p class="two titolo">RossoCommerce</p>
-    <div [routerLink]="'/cart'" class="seven" *ngIf="currentRoute!='/cart'">
+    <div class="two titolo" style = "font-size: 40px">RossoCommerce</div>
+    <div [routerLink]="'/cart'" class="seven">
       <span class="icart"></span>
       Carrello
     </div>
-    <div (click)="logout()" class="eight">Esci</div>
+    <div class="eight">Esci</div>
   </ng-container>
 
 </div>
