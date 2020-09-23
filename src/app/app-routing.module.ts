@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {HomeComponent} from './features/home/home.component';
+import {HomeComponent} from './features/home/main/home.component';
 
 
 // tslint:disable-next-line:max-line-length

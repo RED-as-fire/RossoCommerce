@@ -11,11 +11,11 @@ import {environment} from '../environments/environment';
 import {reducers} from './redux';
 import {autenticazioneEffects} from './redux/autenticazione/autenticazione.effects';
 import {CoreModule} from './core/core.module';
-import { HomeComponent } from './features/home/home.component';
+import { HomeComponent } from './features/home/main/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
-import { PersonalComponent } from './features/personal/personal.component';
-import {CarrelloComponent} from './features/carrello/carrello.component';
+import { PersonalComponent } from './features/personal/main/personal.component';
+import {CarrelloComponent} from './features/carrello/main/carrello.component';
 
 @NgModule({
   declarations: [
