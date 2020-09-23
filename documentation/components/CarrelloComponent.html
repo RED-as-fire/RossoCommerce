@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AutenticazioneComponent</li>
+  <li>CarrelloComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/features/autenticazione/autenticazione.component.ts</code>
+    <code>src/app/features/carrello/main/carrello.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-autenticazione</code></td>
+                <td class="col-md-9"><code>app-carrello</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./autenticazione.component.scss</code></td>
+                <td class="col-md-9"><code>./carrello.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./autenticazione.component.html</code></td>
+                <td class="col-md-9"><code>./carrello.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/features/autenticazione/autenticazione.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/features/carrello/main/carrello.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/features/autenticazione/autenticazione.component.ts:12</a></div>
+                            class="link-to-prism">src/app/features/carrello/main/carrello.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-autenticazione&#x27;,
-  templateUrl: &#x27;./autenticazione.component.html&#x27;,
-  styleUrls: [&#x27;./autenticazione.component.scss&#x27;]
+  selector: &#x27;app-carrello&#x27;,
+  templateUrl: &#x27;./carrello.component.html&#x27;,
+  styleUrls: [&#x27;./carrello.component.scss&#x27;]
 })
-export class AutenticazioneComponent implements OnInit {
+export class CarrelloComponent implements OnInit {
 
   constructor() { }
 
@@ -237,13 +237,54 @@ export class AutenticazioneComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;basket&quot;&gt;
+  &lt;div class&#x3D;&quot;basket-labels&quot;&gt;
+    &lt;ul&gt;
+      &lt;li class&#x3D;&quot;item item-heading&quot;&gt;Item&lt;/li&gt;
+      &lt;li class&#x3D;&quot;price&quot;&gt;Price&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;basket-product&quot;&gt;
+    &lt;div class&#x3D;&quot;item&quot;&gt;
+      &lt;div class&#x3D;&quot;product-image&quot;&gt;
+        &lt;img class&#x3D;&quot;product-frame&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;product-details&quot;&gt;
+        &lt;h1&gt;&lt;strong&gt;prodotto&lt;/strong&gt;&lt;/h1&gt;
+        &lt;p&gt;&lt;strong&gt;tipo&lt;/strong&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;price&quot;&gt;prezzo&lt;/div&gt;
+    &lt;div class&#x3D;&quot;remove&quot;&gt;
+      &lt;button&gt;Remove&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;aside&gt;
+  &lt;div class&#x3D;&quot;summary&quot;&gt;
+    &lt;div class&#x3D;&quot;summary-total-items&quot;&gt;&lt;span class&#x3D;&quot;total-items&quot;&gt;&lt;/span&gt; Items in your Bag&lt;/div&gt;
+    &lt;div class&#x3D;&quot;summary-subtotal&quot;&gt;
+      &lt;div class&#x3D;&quot;subtotal-title&quot;&gt;Numero prodotti &lt;/div&gt;
+      &lt;div class&#x3D;&quot;numProd&quot;&gt;prodotto&lt;/div&gt;
+      &lt;div class&#x3D;&quot;summary-promo hide&quot;&gt;
+        &lt;div class&#x3D;&quot;promo-title&quot;&gt;Promotion&lt;/div&gt;
+        &lt;div class&#x3D;&quot;promo-value final-value&quot; id&#x3D;&quot;basket-promo&quot;&gt;&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;summary-total&quot;&gt;
+      &lt;div class&#x3D;&quot;total-title&quot;&gt;Totale&lt;/div&gt;
+      &lt;div class&#x3D;&quot;total-value final-value&quot; id&#x3D;&quot;basket-total&quot;&gt;totale&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;summary-checkout&quot;&gt;
+      &lt;button class&#x3D;&quot;checkout-cta&quot; [routerLink]&#x3D;&quot;&#x27;address&#x27;&quot;&gt;Vai al Checkout&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./autenticazione.component.scss</code>
+                    <code>./carrello.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -273,10 +314,10 @@ export class AutenticazioneComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="basket">  <div class="basket-labels">    <ul>      <li class="item item-heading">Item</li>      <li class="price">Price</li>    </ul>  </div>  <div class="basket-product">    <div class="item">      <div class="product-image">        <img class="product-frame">      </div>      <div class="product-details">        <h1><strong>prodotto</strong></h1>        <p><strong>tipo</strong></p>      </div>    </div>    <div class="price">prezzo</div>    <div class="remove">      <button>Remove</button>    </div>  </div></div><aside>  <div class="summary">    <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>    <div class="summary-subtotal">      <div class="subtotal-title">Numero prodotti </div>      <div class="numProd">prodotto</div>      <div class="summary-promo hide">        <div class="promo-title">Promotion</div>        <div class="promo-value final-value" id="basket-promo"></div>      </div>    </div>    <div class="summary-total">      <div class="total-title">Totale</div>      <div class="total-value final-value" id="basket-total">totale</div>    </div>    <div class="summary-checkout">      <button class="checkout-cta" [routerLink]="\'address\'">Vai al Checkout</button>    </div>  </div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutenticazioneComponent', 'selector': 'app-autenticazione'},{'name': 'CarrelloComponent', 'selector': 'app-carrello'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PersonalComponent', 'selector': 'app-personal'},{'name': 'RegistrazioneComponent', 'selector': 'app-registrazione'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AutenticazioneComponent'};
+    var ACTUAL_COMPONENT = {'name': 'CarrelloComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -311,7 +352,7 @@ export class AutenticazioneComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AutenticazioneComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'CarrelloComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

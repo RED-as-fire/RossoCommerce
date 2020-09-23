@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>NotfoundRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/features/notfound/notfound-routing.module.ts</code>
         </p>
 
 
@@ -72,26 +72,15 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import {HomeComponent} from &#x27;./features/home/main/home.component&#x27;;
-import { NotfoundComponent } from &#x27;./features/notfound/main/notfound.component&#x27;;
+import {NotfoundComponent} from &#x27;./main/notfound.component&#x27;;
 
-
-// tslint:disable-next-line:max-line-length
-const routes: Routes &#x3D; [
-  { path: &#x27;auth&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/autenticazione/autenticazione.module&#x27;).then(m &#x3D;&gt; m.AutenticazioneModule)&quot; },
-  { path: &#x27;home&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/home/home.module&#x27;).then(m &#x3D;&gt; m.HomeModule)&quot; },
-  { path: &#x27;personal&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/personal/personal.module&#x27;).then(m &#x3D;&gt; m.PersonalModule)&quot; },
-  { path: &#x27;cart&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/carrello/carrello.module&#x27;).then(m &#x3D;&gt; m.CarrelloModule)&quot;},
-  {path: &#x27;**&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/notfound/notfound.module&#x27;).then(m &#x3D;&gt; m.NotfoundModule)&quot;},
-  { path: &#x27;&#x27;, redirectTo: &#x27;/login&#x27;, pathMatch: &#x27;full&#x27; }
-  ];
-
+const routes: Routes &#x3D; [{ path: &#x27;&#x27;, component: NotfoundComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class NotfoundRoutingModule { }
 </code></pre>
     </div>
 </div>
@@ -127,7 +116,7 @@ export class AppRoutingModule { }
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'NotfoundRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

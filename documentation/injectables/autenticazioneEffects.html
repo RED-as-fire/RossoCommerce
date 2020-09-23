@@ -654,7 +654,7 @@
     tap((action) &#x3D;&gt; {
       console.log(&#x27;salvo in sessione l\&#x27;utente appena registrato&#x27;);
       sessionStorage.setItem(&#x27;utente&#x27;, JSON.stringify(action.user));
-      //this.router.navigateByUrl(&#x27;/home&#x27;);
+      this.router.navigateByUrl(&#x27;/home&#x27;);
     })
   ))</code>
                         </td>
@@ -734,7 +734,7 @@ export class autenticazioneEffects {
     tap((action) &#x3D;&gt; {
       console.log(&#x27;salvo in sessione l\&#x27;utente appena registrato&#x27;);
       sessionStorage.setItem(&#x27;utente&#x27;, JSON.stringify(action.user));
-      //this.router.navigateByUrl(&#x27;/home&#x27;);
+      this.router.navigateByUrl(&#x27;/home&#x27;);
     })
   ));
   registerUser(email: string, password: string, nome: string, cognome: string): Observable&lt;User&gt; {

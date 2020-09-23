@@ -246,6 +246,10 @@ import { LoginComponent } from &#x27;./login/login.component&#x27;;
 import { RegistrazioneComponent } from &#x27;./registrazione/registrazione.component&#x27;;
 import {SharedModule} from &#x27;../../shared/shared.module&#x27;;
 import {AutenticazioneFacadeService} from &#x27;./services/autenticazione-facade.service&#x27;;
+import {MatCardModule} from &#x27;@angular/material/card&#x27;;
+import {MatFormFieldModule} from &#x27;@angular/material/form-field&#x27;;
+import {MatIconModule} from &#x27;@angular/material/icon&#x27;;
+import {MatSlideToggleModule} from &#x27;@angular/material/slide-toggle&#x27;;
 
 
 @NgModule({
@@ -254,6 +258,10 @@ import {AutenticazioneFacadeService} from &#x27;./services/autenticazione-facade
     CommonModule,
     AutenticazioneRoutingModule,
     SharedModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatSlideToggleModule,
   ],
   providers: [AutenticazioneFacadeService]
 })

@@ -1,1 +1,42 @@
-<p>carrello works!</p>
+<div class="basket">
+  <div class="basket-labels">
+    <ul>
+      <li class="item item-heading">Item</li>
+      <li class="price">Price</li>
+    </ul>
+  </div>
+  <div class="basket-product">
+    <div class="item">
+      <div class="product-image">
+        <img class="product-frame">
+      </div>
+      <div class="product-details">
+        <h1><strong>prodotto</strong></h1>
+        <p><strong>tipo</strong></p>
+      </div>
+    </div>
+    <div class="price">prezzo</div>
+    <div class="remove">
+      <button>Remove</button>
+    </div>
+  </div>
+</div>
+<aside>
+  <div class="summary">
+    <div class="summary-total-items"><span class="total-items"></span> Items in your Bag</div>
+    <div class="summary-subtotal">
+      <div class="subtotal-title">Numero prodotti </div>
+      <div class="numProd">prodotto</div>
+      <div class="summary-promo hide">
+        <div class="promo-title">Promotion</div>
+        <div class="promo-value final-value" id="basket-promo"></div>
+      </div>
+    </div>
+    <div class="summary-total">
+      <div class="total-title">Totale</div>
+      <div class="total-value final-value" id="basket-total">totale</div>
+    </div>
+    <div class="summary-checkout">
+      <button class="checkout-cta" [routerLink]="'indirizzo'">Vai al Checkout</button>
+    </div>
+  </div>

@@ -73,6 +73,12 @@
                             <a href="#initialState" title="src/app/redux/autenticazione/autenticazione.reducers.ts"><b>initialState</b>&nbsp;&nbsp;&nbsp;(src/.../autenticazione.reducers.ts)</a>
                         </li>
                         <li>
+                            <a href="#initialState" title="src/app/redux/products/products.reducers.ts"><b>initialState</b>&nbsp;&nbsp;&nbsp;(src/.../products.reducers.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#initProduct" title="src/app/redux/products/products.action.ts"><b>initProduct</b>&nbsp;&nbsp;&nbsp;(src/.../products.action.ts)</a>
+                        </li>
+                        <li>
                             <a href="#initUser" title="src/app/redux/autenticazione/autenticazione.actions.ts"><b>initUser</b>&nbsp;&nbsp;&nbsp;(src/.../autenticazione.actions.ts)</a>
                         </li>
                         <li>
@@ -85,10 +91,16 @@
                             <a href="#loginUserSuccess" title="src/app/redux/autenticazione/autenticazione.actions.ts"><b>loginUserSuccess</b>&nbsp;&nbsp;&nbsp;(src/.../autenticazione.actions.ts)</a>
                         </li>
                         <li>
+                            <a href="#productsReducer" title="src/app/redux/products/products.reducers.ts"><b>productsReducer</b>&nbsp;&nbsp;&nbsp;(src/.../products.reducers.ts)</a>
+                        </li>
+                        <li>
                             <a href="#reducers" title="src/app/redux/index.ts"><b>reducers</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
                         </li>
                         <li>
                             <a href="#require" title="src/test.ts"><b>require</b>&nbsp;&nbsp;&nbsp;(src/.../test.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#retrieveAllProducts" title="src/app/redux/products/products.action.ts"><b>retrieveAllProducts</b>&nbsp;&nbsp;&nbsp;(src/.../products.action.ts)</a>
                         </li>
                         <li>
                             <a href="#selectUserState" title="src/app/redux/index.ts"><b>selectUserState</b>&nbsp;&nbsp;&nbsp;(src/.../index.ts)</a>
@@ -267,6 +279,107 @@
                             <i>Default value : </i><code>{
   production: false
 }</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/redux/products/products.reducers.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initialState"></a>
+                        <span class="name">
+                            <b>
+                            initialState</b>
+                            <a href="#initialState"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/ProductsState.html" target="_self" >ProductsState</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+  products: []
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="productsReducer"></a>
+                        <span class="name">
+                            <b>
+                            productsReducer</b>
+                            <a href="#productsReducer"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createReducer(
+  initialState,
+  on(initProduct, (state, { products }) &#x3D;&gt; ( { ...state, products } )),
+)</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/app/redux/products/products.action.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initProduct"></a>
+                        <span class="name">
+                            <b>
+                            initProduct</b>
+                            <a href="#initProduct"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createAction(&#x27;[Product] product&#x27;, props&lt;{products: Products[]}&gt;())</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="retrieveAllProducts"></a>
+                        <span class="name">
+                            <b>
+                            retrieveAllProducts</b>
+                            <a href="#retrieveAllProducts"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>createAction(&#x27;[Product] titoli&#x27;)</code>
                         </td>
                     </tr>
 

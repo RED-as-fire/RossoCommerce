@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AutenticazioneComponent</li>
+  <li>PersonalComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/features/autenticazione/autenticazione.component.ts</code>
+    <code>src/app/features/personal/main/personal.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-autenticazione</code></td>
+                <td class="col-md-9"><code>app-personal</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./autenticazione.component.scss</code></td>
+                <td class="col-md-9"><code>./personal.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./autenticazione.component.html</code></td>
+                <td class="col-md-9"><code>./personal.component.html</code></td>
             </tr>
 
 
@@ -156,7 +156,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/features/autenticazione/autenticazione.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/features/personal/main/personal.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -196,7 +196,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/features/autenticazione/autenticazione.component.ts:12</a></div>
+                            class="link-to-prism">src/app/features/personal/main/personal.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,11 +221,11 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-autenticazione&#x27;,
-  templateUrl: &#x27;./autenticazione.component.html&#x27;,
-  styleUrls: [&#x27;./autenticazione.component.scss&#x27;]
+  selector: &#x27;app-personal&#x27;,
+  templateUrl: &#x27;./personal.component.html&#x27;,
+  styleUrls: [&#x27;./personal.component.scss&#x27;]
 })
-export class AutenticazioneComponent implements OnInit {
+export class PersonalComponent implements OnInit {
 
   constructor() { }
 
@@ -237,13 +237,70 @@ export class AutenticazioneComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;bg-contact2&quot; &gt;
+  &lt;div class&#x3D;&quot;container-contact2&quot;&gt;
+    &lt;div class&#x3D;&quot;wrap-contact2&quot;&gt;
+      &lt;div class&#x3D;&quot;left&quot;&gt;
+        &lt;img [src]&#x3D;[] style&#x3D;&quot;width: 100%; padding-right: 20px;&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;right&quot;&gt;
+        &lt;form class&#x3D;&quot;contact2-form validate-form&quot; [formGroup]&#x3D;&quot;&quot;&gt;
+                    &lt;span class&#x3D;&quot;contact2-form-title&quot;&gt;
+                        PERSONALIZZA IL TUO PRODOTTO
+                    &lt;/span&gt;
+
+          &lt;div class&#x3D;&quot;cva&quot;&gt;
+            &lt;app-tipo-chiusura formControlName&#x3D;&quot;chiusura&quot;&gt;&lt;/app-tipo-chiusura&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;cva&quot;&gt;
+            &lt;app-numeri-scarpe formControlName&#x3D;&quot;numero&quot; class&#x3D;&quot;numeri&quot;&gt;&lt;/app-numeri-scarpe&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot;&gt;
+            &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;testo&quot; placeholder&#x3D;&quot;TESTO&quot;&gt;
+          &lt;/div&gt;
+
+          &lt;div class&#x3D;&quot;cva&quot;&gt;
+            &lt;app-colore-testo formControlName&#x3D;&quot;coloretesto&quot;&gt;&lt;/app-colore-testo&gt;
+          &lt;/div&gt;
+
+          &lt;table style&#x3D;&quot;width: 100%;&quot;&gt;
+            &lt;tr&gt;
+              &lt;td&gt;
+                &lt;div class&#x3D;&quot;container-contact2-form-btn&quot;&gt;
+                  &lt;div class&#x3D;&quot;wrap-contact2-form-btn&quot;&gt;
+                    &lt;div class&#x3D;&quot;contact2-form-bgbtn&quot;&gt;&lt;/div&gt;
+                    &lt;button class&#x3D;&quot;contact2-form-btn&quot;&gt;
+                      RIPRISTINA
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+              &lt;td&gt;
+                &lt;div class&#x3D;&quot;container-contact2-form-btn&quot;&gt;
+                  &lt;div class&#x3D;&quot;wrap-contact2-form-btn&quot;&gt;
+                    &lt;div class&#x3D;&quot;contact2-form-bgbtn&quot;&gt;&lt;/div&gt;
+                    &lt;button class&#x3D;&quot;contact2-form-btn&quot; type&#x3D;&quot;submit&quot;&gt;
+                      AGGIUNGI
+                    &lt;/button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./autenticazione.component.scss</code>
+                    <code>./personal.component.scss</code>
                 </p>
                 <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
@@ -273,10 +330,10 @@ export class AutenticazioneComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="bg-contact2" >  <div class="container-contact2">    <div class="wrap-contact2">      <div class="left">        <img [src]=[] style="width: 100%; padding-right: 20px;">      </div>      <div class="right">        <form class="contact2-form validate-form" [formGroup]="">                    <span class="contact2-form-title">                        PERSONALIZZA IL TUO PRODOTTO                    </span>          <div class="cva">            <app-tipo-chiusura formControlName="chiusura"></app-tipo-chiusura>          </div>          <div class="cva">            <app-numeri-scarpe formControlName="numero" class="numeri"></app-numeri-scarpe>          </div>          <div class="wrap-input2 validate-input">            <input class="input2" type="text" formControlName="testo" placeholder="TESTO">          </div>          <div class="cva">            <app-colore-testo formControlName="coloretesto"></app-colore-testo>          </div>          <table style="width: 100%;">            <tr>              <td>                <div class="container-contact2-form-btn">                  <div class="wrap-contact2-form-btn">                    <div class="contact2-form-bgbtn"></div>                    <button class="contact2-form-btn">                      RIPRISTINA                    </button>                  </div>                </div>              </td>              <td>                <div class="container-contact2-form-btn">                  <div class="wrap-contact2-form-btn">                    <div class="contact2-form-bgbtn"></div>                    <button class="contact2-form-btn" type="submit">                      AGGIUNGI                    </button>                  </div>                </div>              </td>            </tr>          </table>        </form>      </div>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutenticazioneComponent', 'selector': 'app-autenticazione'},{'name': 'CarrelloComponent', 'selector': 'app-carrello'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PersonalComponent', 'selector': 'app-personal'},{'name': 'RegistrazioneComponent', 'selector': 'app-registrazione'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AutenticazioneComponent'};
+    var ACTUAL_COMPONENT = {'name': 'PersonalComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -311,7 +368,7 @@ export class AutenticazioneComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AutenticazioneComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'PersonalComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

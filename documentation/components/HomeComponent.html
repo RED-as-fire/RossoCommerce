@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>AutenticazioneComponent</li>
+  <li>HomeComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/features/autenticazione/autenticazione.component.ts</code>
+    <code>src/app/features/home/main/home.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-autenticazione</code></td>
+                <td class="col-md-9"><code>app-home</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./autenticazione.component.scss</code></td>
+                <td class="col-md-9"><code>./home.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./autenticazione.component.html</code></td>
+                <td class="col-md-9"><code>./home.component.html</code></td>
             </tr>
 
 
@@ -151,15 +151,57 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(config: NgbCarouselConfig, store: Store)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/features/autenticazione/autenticazione.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="10" class="link-to-prism">src/app/features/home/main/home.component.ts:10</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>config</td>
+                                                  
+                                                        <td>
+                                                                    <code>NgbCarouselConfig</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>store</td>
+                                                  
+                                                        <td>
+                                                                    <code>Store</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -195,8 +237,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/features/autenticazione/autenticazione.component.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="21"
+                            class="link-to-prism">src/app/features/home/main/home.component.ts:21</a></div>
                 </td>
             </tr>
 
@@ -219,15 +261,24 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import {Store} from &#x27;@ngrx/store&#x27;;
+import {NgbCarouselConfig} from &#x27;@ng-bootstrap/ng-bootstrap&#x27;;
 
 @Component({
-  selector: &#x27;app-autenticazione&#x27;,
-  templateUrl: &#x27;./autenticazione.component.html&#x27;,
-  styleUrls: [&#x27;./autenticazione.component.scss&#x27;]
+  selector: &#x27;app-home&#x27;,
+  templateUrl: &#x27;./home.component.html&#x27;,
+  styleUrls: [&#x27;./home.component.scss&#x27;]
 })
-export class AutenticazioneComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(config: NgbCarouselConfig, private store: Store) {
+
+    // customize default values of carousels used by this component tree
+    config.interval &#x3D; 10000;
+    config.wrap &#x3D; false;
+    config.keyboard &#x3D; false;
+    config.pauseOnHover &#x3D; false;
+  }
 
   ngOnInit(): void {
   }
@@ -237,15 +288,63 @@ export class AutenticazioneComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;ngb-carousel  class&#x3D;&quot;position&quot;&gt;
+  &lt;ng-template ngbSlide&gt;
+    &lt;div class&#x3D;&quot;picsum-img-wrapper&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../../assets/games/cyberpunk.jpg&quot; alt&#x3D;&quot;Random first slide&quot; class&#x3D;&quot;grandezzaimmagine&quot;&gt;
+    &lt;/div&gt;
+
+  &lt;/ng-template&gt;
+  &lt;ng-template ngbSlide&gt;
+    &lt;div class&#x3D;&quot;picsum-img-wrapper&quot;&gt;
+      &lt;img src&#x3D;&quot;../../../../assets/games/assassin.jpg&quot; alt&#x3D;&quot;Random second slide&quot; class&#x3D;&quot;grandezzaimmagine&quot;&gt;
+    &lt;/div&gt;
+
+  &lt;/ng-template&gt;
+&lt;/ngb-carousel&gt;
+
+&lt;div&gt;
+&lt;button routerLink&#x3D;&quot;/personal&quot; class&#x3D;&quot;goToShopLink&quot;&gt;Scegli la tua versione&lt;/button&gt;
+&lt;/div&gt;
+
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./autenticazione.component.scss</code>
+                    <code>./home.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss"></code></pre>
+                <pre class="line-numbers"><code class="language-scss">.grandezzaimmagine{
+  width:1000px;
+  height:500px;
+  border: none;
+  border-radius: 15px;
+}
+.position{
+  top:140px;
+  left:230px;
+  right:230px;
+  width: 800px;
+}
+
+button.testo{
+
+  text-align: center ;
+  position: relative;
+  top:460px;
+  left:640px;
+  width:200px;
+  height:35px;
+  background-color:rgb(194, 128, 255);
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 15px;
+  color:white;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 7px;
+
+}
+</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -273,10 +372,10 @@ export class AutenticazioneComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><ngb-carousel  class="position">  <ng-template ngbSlide>    <div class="picsum-img-wrapper">      <img src="../../../../assets/games/cyberpunk.jpg" alt="Random first slide" class="grandezzaimmagine">    </div>  </ng-template>  <ng-template ngbSlide>    <div class="picsum-img-wrapper">      <img src="../../../../assets/games/assassin.jpg" alt="Random second slide" class="grandezzaimmagine">    </div>  </ng-template></ngb-carousel><div><button routerLink="/personal" class="goToShopLink">Scegli la tua versione</button></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutenticazioneComponent', 'selector': 'app-autenticazione'},{'name': 'CarrelloComponent', 'selector': 'app-carrello'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PersonalComponent', 'selector': 'app-personal'},{'name': 'RegistrazioneComponent', 'selector': 'app-registrazione'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'AutenticazioneComponent'};
+    var ACTUAL_COMPONENT = {'name': 'HomeComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -311,7 +410,7 @@ export class AutenticazioneComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'AutenticazioneComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'HomeComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

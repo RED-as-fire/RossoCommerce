@@ -27,77 +27,80 @@
                    <compodoc-menu mode="normal"></compodoc-menu>
                </div>
                <!-- START CONTENT -->
-               <div class="content module">
+               <div class="content injectable">
                    <div class="content-data">
 
 
 
+
+
+
+
 <ol class="breadcrumb">
-    <li>Modules</li>
-    <li>AppRoutingModule</li>
+  <li>Injectables</li>
+  <li>CarrelloService</li>
 </ol>
 
-
 <ul class="nav nav-tabs" role="tablist">
-    <li  class="active" >
-        <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
-    </li>
-    <li >
-        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
-    </li>
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
 </ul>
 
 <div class="tab-content">
     <div class="tab-pane fade active in" id="c-info">
-
         <p class="comment">
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/features/carrello/services/carrello.service.ts</code>
         </p>
 
 
 
 
-        <div class="container-fluid module">
-            <div class="row">
-            </div>
-        </div>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="6" class="link-to-prism">src/app/features/carrello/services/carrello.service.ts:6</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
+
 
 
     </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
-import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import {HomeComponent} from &#x27;./features/home/main/home.component&#x27;;
-import { NotfoundComponent } from &#x27;./features/notfound/main/notfound.component&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
 
-
-// tslint:disable-next-line:max-line-length
-const routes: Routes &#x3D; [
-  { path: &#x27;auth&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/autenticazione/autenticazione.module&#x27;).then(m &#x3D;&gt; m.AutenticazioneModule)&quot; },
-  { path: &#x27;home&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/home/home.module&#x27;).then(m &#x3D;&gt; m.HomeModule)&quot; },
-  { path: &#x27;personal&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/personal/personal.module&#x27;).then(m &#x3D;&gt; m.PersonalModule)&quot; },
-  { path: &#x27;cart&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/carrello/carrello.module&#x27;).then(m &#x3D;&gt; m.CarrelloModule)&quot;},
-  {path: &#x27;**&#x27;, loadChildren: () &#x3D;&gt; &quot;import(&#x27;./features/notfound/notfound.module&#x27;).then(m &#x3D;&gt; m.NotfoundModule)&quot;},
-  { path: &#x27;&#x27;, redirectTo: &#x27;/login&#x27;, pathMatch: &#x27;full&#x27; }
-  ];
-
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+@Injectable({
+  providedIn: &#x27;root&#x27;
 })
-export class AppRoutingModule { }
+export class CarrelloService {
+
+  constructor() { }
+}
 </code></pre>
     </div>
+
 </div>
-
-
-
 
 
 
@@ -126,8 +129,8 @@ export class AppRoutingModule { }
 
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
-            var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'CarrelloService.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
