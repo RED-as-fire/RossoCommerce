@@ -13,12 +13,16 @@ import {autenticazioneEffects} from './redux/autenticazione/autenticazione.effec
 import {CoreModule} from './core/core.module';
 import { HomeComponent } from './features/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenuComponent } from './menu/menu/menu.component';
+import { MenuComponent } from './menu/menu.component';
+import { PersonalComponent } from './features/personal/personal.component';
+import {CarrelloComponent} from './features/carrello/carrello.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+    CarrelloComponent,
+    PersonalComponent,
   ],
   imports: [
     BrowserModule,

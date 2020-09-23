@@ -9,6 +9,6 @@ export class HomeFacadeService {
   constructor(private store: Store) { }
 
   getAllProducts() {
-    this.store.dispatch(getAllProducts());
+    // this.store.dispatch(getAllProducts());
   }
 }
