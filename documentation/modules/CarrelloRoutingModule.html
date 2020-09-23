@@ -74,7 +74,12 @@
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import {CarrelloComponent} from &#x27;./main/carrello.component&#x27;;
 
-const routes: Routes &#x3D; [{ path: &#x27;&#x27;, component: CarrelloComponent }];
+const routes: Routes &#x3D; [
+  { path: &#x27;&#x27;, component: CarrelloComponent, children: [
+      {path: &#x27;detail&#x27;, component: CarrelloComponent},
+      {path: &#x27;edit&#x27;, component: CarrelloComponent},
+      {path: &#x27;add&#x27;, component: CarrelloComponent}
+  ] }];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
