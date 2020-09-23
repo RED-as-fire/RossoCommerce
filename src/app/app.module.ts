@@ -13,6 +13,7 @@ import {autenticazioneEffects} from './redux/autenticazione/autenticazione.effec
 import {CoreModule} from './core/core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenuComponent } from './menu/menu.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { MenuComponent } from './menu/menu.component';
     }),
     StoreRouterConnectingModule.forRoot(),
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

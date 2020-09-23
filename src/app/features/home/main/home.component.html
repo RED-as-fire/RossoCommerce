@@ -1,21 +1,19 @@
-<div uk-slideshow="animation: push">
+<ngb-carousel  class="position">
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="../../../../assets/games/cyberpunk.jpg" alt="Random first slide" class="grandezzaimmagine">
+    </div>
 
-  <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+  </ng-template>
+  <ng-template ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img src="../../../../assets/games/assassin.jpg" alt="Random second slide" class="grandezzaimmagine">
+    </div>
 
-    <ul class="uk-slideshow-items">
-      <li>
-        <img src="../../../../assets/games/cyberpunk.jpg" alt="" uk-cover>
-      </li>
-      <li>
-        <img src="../../../../assets/games/assassin.jpg" alt="" uk-cover>
-      </li>
-    </ul>
+  </ng-template>
+</ngb-carousel>
 
-    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
-    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
-
-  </div>
-
-  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"></ul>
-
+<div>
+<button routerLink="/personal" class="goToShopLink">Scegli la tua versione</button>
 </div>
+
