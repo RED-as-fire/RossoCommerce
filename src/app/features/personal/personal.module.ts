@@ -12,4 +12,4 @@ import {PersonalComponent} from './main/personal.component';
     PersonalRoutingModule
   ]
 })
-export class PersonalizzaModule { }
+export class PersonalModule { }
