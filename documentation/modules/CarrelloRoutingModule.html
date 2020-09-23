@@ -73,12 +73,15 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
 import {CarrelloComponent} from &#x27;./main/carrello.component&#x27;;
+import {IndirizzoComponent} from &#x27;./indirizzo/indirizzo.component&#x27;;
+import {DettaglioComponent} from &#x27;./dettaglio/dettaglio.component&#x27;;
+import {ModificaComponent} from &#x27;./modifica/modifica.component&#x27;;
 
 const routes: Routes &#x3D; [
   { path: &#x27;&#x27;, component: CarrelloComponent, children: [
-      {path: &#x27;detail&#x27;, component: CarrelloComponent},
-      {path: &#x27;edit&#x27;, component: CarrelloComponent},
-      {path: &#x27;add&#x27;, component: CarrelloComponent}
+      {path: &#x27;detail&#x27;, component: DettaglioComponent},
+      {path: &#x27;address&#x27;, component: IndirizzoComponent},
+      {path: &#x27;edit&#x27;, component: ModificaComponent}
   ] }];
 
 @NgModule({

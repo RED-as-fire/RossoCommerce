@@ -237,7 +237,92 @@ export class IndirizzoComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;p&gt;indirizzo works!&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;bg-contact2&quot; &gt;
+  &lt;div class&#x3D;&quot;container-contact2&quot;&gt;
+    &lt;div class&#x3D;&quot;wrap-contact2&quot;&gt;
+      &lt;form class&#x3D;&quot;contact2-form validate-form&quot; [formGroup]&#x3D;&quot;&quot;&gt;
+                &lt;span class&#x3D;&quot;contact2-form-title&quot;&gt;
+                    DATI SPEDIZIONE
+                &lt;/span&gt;
+
+        &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate&#x3D;&quot;Name is required&quot;&gt;
+          &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;NOME&quot; [value]&#x3D;&quot;&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+          &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;COGNOME&quot; [value]&#x3D;&quot;&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+          &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;telefono&quot; placeholder&#x3D;&quot;telefono&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;table style&#x3D;&quot;width: 100%;&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+                &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;citta&quot; placeholder&#x3D;&quot;CITTA&#x27;&quot;&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+                &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;tel&quot; formControlName&#x3D;&quot;cap&quot; placeholder&#x3D;&quot;CAP&quot;&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+
+        &lt;table style&#x3D;&quot;width: 100%;&quot;&gt;
+          &lt;tr&gt;
+            &lt;td style&#x3D;&quot;width: 80%;&quot;&gt;
+              &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+                &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;indirizzo&quot; placeholder&#x3D;&quot;INDIRIZZO&quot;&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td style&#x3D;&quot;width: 20%;&quot;&gt;
+              &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+                &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;numerocivico&quot; placeholder&#x3D;&quot;N°&quot;&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+
+        &lt;div class&#x3D;&quot;wrap-input2 validate-input&quot; data-validate &#x3D; &quot;Valid email is required: ex@abc.xyz&quot;&gt;
+          &lt;input class&#x3D;&quot;input2&quot; type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;informazioni&quot; placeholder&#x3D;&quot;INFORMAZIONI PER IL CORRIERE&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;table style&#x3D;&quot;width: 100%;&quot;&gt;
+          &lt;tr&gt;
+            &lt;td&gt;
+              &lt;div class&#x3D;&quot;container-contact2-form-btn&quot;&gt;
+                &lt;div class&#x3D;&quot;wrap-contact2-form-btn&quot;&gt;
+                  &lt;div class&#x3D;&quot;contact2-form-bgbtn&quot;&gt;&lt;/div&gt;
+                  &lt;button class&#x3D;&quot;contact2-form-btn&quot; [routerLink]&#x3D;&quot;[&#x27;/cart&#x27;]&quot;&gt;
+                    INDIETRO
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;!-- spazio per i tre pallini --&gt;
+            &lt;/td&gt;
+            &lt;td&gt;
+              &lt;div class&#x3D;&quot;container-contact2-form-btn&quot;&gt;
+                &lt;div class&#x3D;&quot;wrap-contact2-form-btn&quot;&gt;
+                  &lt;div class&#x3D;&quot;contact2-form-bgbtn&quot;&gt;&lt;/div&gt;
+                  &lt;button class&#x3D;&quot;contact2-form-btn&quot; type&#x3D;&quot;submit&quot;&gt;
+                    CHECKOUT
+                  &lt;/button&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
     </div>
 
@@ -273,7 +358,7 @@ export class IndirizzoComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><p>indirizzo works!</p></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="bg-contact2" >  <div class="container-contact2">    <div class="wrap-contact2">      <form class="contact2-form validate-form" [formGroup]="">                <span class="contact2-form-title">                    DATI SPEDIZIONE                </span>        <div class="wrap-input2 validate-input" data-validate="Name is required">          <input class="input2" type="text" placeholder="NOME" [value]="">        </div>        <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">          <input class="input2" type="text" placeholder="COGNOME" [value]="">        </div>        <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">          <input class="input2" type="text" formControlName="telefono" placeholder="telefono">        </div>        <table style="width: 100%;">          <tr>            <td>              <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">                <input class="input2" type="text" formControlName="citta" placeholder="CITTA\'">              </div>            </td>            <td>              <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">                <input class="input2" type="tel" formControlName="cap" placeholder="CAP">              </div>            </td>          </tr>        </table>        <table style="width: 100%;">          <tr>            <td style="width: 80%;">              <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">                <input class="input2" type="text" formControlName="indirizzo" placeholder="INDIRIZZO">              </div>            </td>            <td style="width: 20%;">              <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">                <input class="input2" type="text" formControlName="numerocivico" placeholder="N°">              </div>            </td>          </tr>        </table>        <div class="wrap-input2 validate-input" data-validate = "Valid email is required: ex@abc.xyz">          <input class="input2" type="text" formControlName="informazioni" placeholder="INFORMAZIONI PER IL CORRIERE">        </div>        <table style="width: 100%;">          <tr>            <td>              <div class="container-contact2-form-btn">                <div class="wrap-contact2-form-btn">                  <div class="contact2-form-bgbtn"></div>                  <button class="contact2-form-btn" [routerLink]="[\'/cart\']">                    INDIETRO                  </button>                </div>              </div>            </td>            <td>              <!-- spazio per i tre pallini -->            </td>            <td>              <div class="container-contact2-form-btn">                <div class="wrap-contact2-form-btn">                  <div class="contact2-form-bgbtn"></div>                  <button class="contact2-form-btn" type="submit">                    CHECKOUT                  </button>                </div>              </div>            </td>          </tr>        </table>      </form>    </div>  </div></div></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AutenticazioneComponent', 'selector': 'app-autenticazione'},{'name': 'CarrelloComponent', 'selector': 'app-carrello'},{'name': 'DettaglioComponent', 'selector': 'app-dettaglio'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'IndirizzoComponent', 'selector': 'app-indirizzo'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'MenuComponent', 'selector': 'app-menu'},{'name': 'ModificaComponent', 'selector': 'app-modifica'},{'name': 'NotfoundComponent', 'selector': 'app-notfound'},{'name': 'PersonalComponent', 'selector': 'app-personal'},{'name': 'RegistrazioneComponent', 'selector': 'app-registrazione'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'IndirizzoComponent'};

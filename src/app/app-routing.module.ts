@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule) },
   { path: 'personal', loadChildren: () => import('./features/personal/personal.module').then(m => m.PersonalModule) },
   { path: 'cart', loadChildren: () => import('./features/carrello/carrello.module').then(m => m.CarrelloModule)},
-  {path: '**', loadChildren: () => import('./features/notfound/notfound.module').then(m => m.NotfoundModule)},
+  { path: '**', loadChildren: () => import('./features/notfound/notfound.module').then(m => m.NotfoundModule)},
   { path: '', redirectTo: '/login', pathMatch: 'full' }
   ];
 
